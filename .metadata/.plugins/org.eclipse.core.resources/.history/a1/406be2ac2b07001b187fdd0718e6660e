@@ -1,0 +1,7 @@
+
+public class HelloSample {
+
+	public static void main(sring[]) {
+		System.out.println("Hello World");
+	}
+}
