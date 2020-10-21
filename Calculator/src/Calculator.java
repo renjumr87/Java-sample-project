@@ -14,6 +14,20 @@ public class Calculator implements ActionListener{
 	JButton sevenButton;
 	JButton eightButton;
 	JButton ninthButton;
+	JButton fourButton;
+	JButton fiveButton;
+	JButton sixButton;
+	JButton oneButton;
+	JButton twoButton;
+	JButton threeButton;
+	JButton dotButton;
+	JButton zeroButton;
+	JButton equalButton;
+	JButton divissionButton;
+	JButton multiplicationButton;
+	JButton substractionButton;
+	JButton additionButton;
+	JButton clearButton;
 	public Calculator() {
 			
 		jf = new JFrame("Renjith's Calculator");
@@ -49,70 +63,89 @@ public class Calculator implements ActionListener{
 		ninthButton.addActionListener(this);
 		jf.add(ninthButton);
 		
-		JButton fourButton = new JButton("4");		
+		fourButton = new JButton("4");		
 		fourButton.setBounds(30, 240, 80, 80);
 		fourButton.setFont(new Font("Arial",Font.PLAIN, 40));
+		fourButton.addActionListener(this);
 		jf.add(fourButton);
 		
-		JButton fiveButton = new JButton("5");		
+		fiveButton = new JButton("5");		
 		fiveButton.setBounds(130, 240, 80, 80);
 		fiveButton.setFont(new Font("Arial",Font.PLAIN, 40));
+		fiveButton.addActionListener(this);
 		jf.add(fiveButton);
 		
-		JButton sixButton = new JButton("6");
+		sixButton = new JButton("6");
 		sixButton.setBounds(230, 240, 80, 80);
 		sixButton.setFont(new Font("Arial",Font.PLAIN, 40));
+		sixButton.addActionListener(this);
 		jf.add(sixButton);
 		
-		JButton oneButton = new JButton("1");		
+		oneButton = new JButton("1");		
 		oneButton.setBounds(30, 340, 80, 80);
 		oneButton.setFont(new Font("Arial",Font.PLAIN, 40));
+		oneButton.addActionListener(this);
 		jf.add(oneButton);
 		
-		JButton twoButton = new JButton("2");		
+		twoButton = new JButton("2");		
 		twoButton.setBounds(130, 340, 80, 80);
 		twoButton.setFont(new Font("Arial",Font.PLAIN, 40));
+		twoButton.addActionListener(this);
 		jf.add(twoButton);
 		
-		JButton threeButton = new JButton("3");
+		threeButton = new JButton("3");
 		threeButton.setBounds(230, 340, 80, 80);
 		threeButton.setFont(new Font("Arial",Font.PLAIN, 40));
+		threeButton.addActionListener(this);
 		jf.add(threeButton);
 		
-		JButton dotButton = new JButton(".");		
+		dotButton = new JButton(".");		
 		dotButton.setBounds(30, 440, 80, 80);
 		dotButton.setFont(new Font("Arial",Font.PLAIN, 40));
+		dotButton.addActionListener(this);
 		jf.add(dotButton);
 		
-		JButton zeroButton = new JButton("0");		
+		zeroButton = new JButton("0");		
 		zeroButton.setBounds(130, 440, 80, 80);
 		zeroButton.setFont(new Font("Arial",Font.PLAIN, 40));
+		zeroButton.addActionListener(this);
 		jf.add(zeroButton);
 		
-		JButton equalButton = new JButton("=");
+		equalButton = new JButton("=");
 		equalButton.setBounds(230, 440, 80, 80);
 		equalButton.setFont(new Font("Arial",Font.PLAIN, 40));
+		equalButton.addActionListener(this);
 		jf.add(equalButton);
 		
-		JButton divissionButton = new JButton("/");
+		divissionButton = new JButton("/");
 		divissionButton.setBounds(330, 140, 80, 80);
 		divissionButton.setFont(new Font("Arial",Font.PLAIN, 40));
+		divissionButton.addActionListener(this);
 		jf.add(divissionButton);
 		
-		JButton multiplicationButton = new JButton("*");
+		multiplicationButton = new JButton("*");
 		multiplicationButton.setBounds(330, 240, 80, 80);
 		multiplicationButton.setFont(new Font("Arial",Font.PLAIN, 40));
+		multiplicationButton.addActionListener(this);
 		jf.add(multiplicationButton);
 		
-		JButton substractionButton = new JButton("-");
+		substractionButton = new JButton("-");
 		substractionButton.setBounds(330, 340, 80, 80);
 		substractionButton.setFont(new Font("Arial",Font.PLAIN, 40));
+		substractionButton.addActionListener(this);
 		jf.add(substractionButton);
 		
-		JButton additionButton = new JButton("+");
+		additionButton = new JButton("+");
 		additionButton.setBounds(330, 440, 80, 80);
 		additionButton.setFont(new Font("Arial",Font.PLAIN, 40));
+		additionButton.addActionListener(this);
 		jf.add(additionButton);
+		
+		clearButton = new JButton("C");
+		clearButton.setBounds(430, 440, 100, 80);
+		clearButton.setFont(new Font("Arial",Font.PLAIN, 40));
+		clearButton.addActionListener(this);
+		jf.add(clearButton);
 		
 		jf.setVisible(true);
 		jf.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
@@ -134,6 +167,34 @@ public class Calculator implements ActionListener{
 			displayLabel.setText(displayLabel.getText() + "8");
 		}else if(e.getSource() == ninthButton) {
 			displayLabel.setText(displayLabel.getText() + "9");
+		}else if(e.getSource() == fourButton) {
+			displayLabel.setText(displayLabel.getText() + "4");
+		}else if(e.getSource() == fiveButton) {
+			displayLabel.setText(displayLabel.getText() + "5");
+		}else if(e.getSource() == sixButton) {
+			displayLabel.setText(displayLabel.getText() + "6");
+		}else if(e.getSource() == oneButton) {
+			displayLabel.setText(displayLabel.getText() + "1");
+		}else if(e.getSource() == twoButton) {
+			displayLabel.setText(displayLabel.getText() + "2");
+		}else if(e.getSource() == threeButton) {
+			displayLabel.setText(displayLabel.getText() + "3");
+		}else if(e.getSource() == dotButton) {
+			displayLabel.setText(displayLabel.getText() + ".");
+		}else if(e.getSource() == zeroButton) {
+			displayLabel.setText(displayLabel.getText() + "0");
+		}else if(e.getSource() == equalButton) {
+			displayLabel.setText(displayLabel.getText() + "=");
+		}else if(e.getSource() == divissionButton) {
+			displayLabel.setText(displayLabel.getText() + "/");
+		}else if(e.getSource() == multiplicationButton) {
+			displayLabel.setText(displayLabel.getText() + "*");
+		}else if(e.getSource() == substractionButton) {
+			displayLabel.setText(displayLabel.getText() + "-");
+		}else if(e.getSource() == additionButton) {
+			displayLabel.setText(displayLabel.getText() + "+");
+		}else if(e.getSource() == clearButton) {
+			displayLabel.setText("");
 		}
 		
 	}
